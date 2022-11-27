@@ -1,4 +1,3 @@
-## Xerox Debouncer
 
 <p align='center'>
   <b>Follow me here:</b><br>  
