@@ -1,19 +1,17 @@
-import os, threading, json, phonenumbers, time, subprocess
-from random import choice
-from json import loads
-from colorama import Fore
-from pystyle import Anime, Colors, Center, System, Colorate
+import subprocess, time, win32console
 from sys import executable
 
 """
+--------------------@XeroxOnTop-------------------
+
 Date of releases : 25/11/2022
 Original creator : https://github.com/XeroxOnTop
+
+--------------------@XeroxOnTop-------------------
 """
 
-System.Title("Debouncer ~ @XeroxOnTop")
-
 requirements = [
-    ["animation", "animation"],
+    ["colorama", "colorama"],
     ["pystyle", "pystyle"],
     ["phonenumbers", "phonenumbers"]
 ]
@@ -23,6 +21,8 @@ for module in requirements:
     except:
         subprocess.Popen(f"{executable} -m pip install {module[1]}", shell=True)
         time.sleep(3)
+
+win32console.SetConsoleTitle("Debouncer ~ @XeroxOnTop")
 
 xerox = r"""
 
@@ -46,10 +46,18 @@ xerox = r"""
 
 """[1:].replace('m','0')
 
+from pystyle import Anime, Colors, Center, Colorate
+from colorama import Fore
+
 Anime.Fade(text=Center.Center(xerox), color=Colors.black_to_green, mode=Colorate.Vertical, time=2)
 
 print(Center.XCenter("Debouncer ~ @XeroxOnTop"))
 print(Fore.LIGHTBLACK_EX + "[+] License : MIT License" + Fore.RESET)
+
+import os, threading, json, phonenumbers, time, subprocess, win32console
+from random import choice
+from json import loads
+from phonenumbers import geocoder, carrier
 
 def leT():
     let = input("\n\n[?] Threads : ")
@@ -68,18 +76,20 @@ def Main():
             y = phonenumbers.parse(t)
 
             if phonenumbers.is_valid_number(y):
+                LeFournisseur = carrier.name_for_number(y, 'fr')
+                LePaysDeFou = geocoder.description_for_number(y, "fr")
                 print(f"{Fore.GREEN}[+] {Fore.RESET}" + f"Valid   : {t}")
-            else: 
-                print(f"{Fore.RED}[-] {Fore.RESET}" + f"Invalid : {t}")
-                with open("Results/output.txt", 'a+') as file : 
+                with open(f"Results/" + f"{LeFournisseur}.txt" , 'a+') as file :
                     file.write(t + '\n')
                     file.close()
+            else: 
+                print(f"{Fore.RED}[-] {Fore.RESET}" + f"Invalid : {t}")
 
 check = loads(open('config.json', 'r').read())
-thread = check["Threads"]
+thread = check['Threads']
 
 if __name__ == '__main__':
     leT()
-    for b in range(int(thread)):
+    for i in range(int(thread)):
         th = threading.Thread(target=Main)
         th.start()
