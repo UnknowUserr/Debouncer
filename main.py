@@ -4,7 +4,7 @@ from sys import executable
 """
 --------------------@XeroxOnTop-------------------
 
-Date of releases : 25/11/2022
+Date of releases : 27/11/2022
 Original creator : https://github.com/XeroxOnTop
 
 --------------------@XeroxOnTop-------------------
