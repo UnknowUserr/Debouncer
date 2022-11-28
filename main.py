@@ -76,8 +76,8 @@ def Main():
             y = phonenumbers.parse(t)
 
             if phonenumbers.is_valid_number(y):
-                LeFournisseur = carrier.name_for_number(y, 'fr')
-                LePaysDeFou = geocoder.description_for_number(y, "fr")
+                LeFournisseur = carrier.name_for_number(y, 'en')
+                LePaysDeFou = geocoder.description_for_number(y, "en")
                 print(f"{Fore.GREEN}[+] {Fore.RESET}" + f"Valid   : {t}")
                 with open(f"Results/" + f"{LeFournisseur}.txt" , 'a+') as file :
                     file.write(t + '\n')
