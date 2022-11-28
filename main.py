@@ -4,7 +4,7 @@ from sys import executable
 """
 --------------------@XeroxOnTop-------------------
 
-Date of releases : 27/11/2022
+Date of releases : 25/11/2022
 Original creator : https://github.com/XeroxOnTop
 
 --------------------@XeroxOnTop-------------------
@@ -54,13 +54,13 @@ Anime.Fade(text=Center.Center(xerox), color=Colors.black_to_green, mode=Colorate
 print(Center.XCenter("Debouncer ~ @XeroxOnTop"))
 print(Fore.LIGHTBLACK_EX + "[+] License : MIT License" + Fore.RESET)
 
-import os, threading, json, phonenumbers, time, subprocess, win32console
+import os, json, phonenumbers, time, subprocess, win32console, threading
 from random import choice
 from json import loads
-from phonenumbers import geocoder, carrier
+from phonenumbers import carrier
 
 def leT():
-    let = input("\n\n[?] Threads : ")
+    let = int(input("\n\n[?] Threads : "))
     XeroxOnTop = open('config.json', 'w')
     dikt = {
     "Threads"  : f"{let}"
@@ -70,20 +70,33 @@ def leT():
 
 def Main():
         while True : 
-
             t = "+337"+"".join(choice("3698521470") for x in range(8))
             os.makedirs("Results/",exist_ok=True)
             y = phonenumbers.parse(t)
 
             if phonenumbers.is_valid_number(y):
-                LeFournisseur = carrier.name_for_number(y, 'en')
-                LePaysDeFou = geocoder.description_for_number(y, "en")
+                LeFournisseur = carrier.name_for_number(y, 'fr')
                 print(f"{Fore.GREEN}[+] {Fore.RESET}" + f"Valid   : {t}")
                 with open(f"Results/" + f"{LeFournisseur}.txt" , 'a+') as file :
                     file.write(t + '\n')
                     file.close()
             else: 
                 print(f"{Fore.RED}[-] {Fore.RESET}" + f"Invalid : {t}")
+
+def scnd():
+        while True : 
+            z = "+336"+"".join(choice("3698521470") for x in range(8))
+            os.makedirs("Results/",exist_ok=True)
+            a = phonenumbers.parse(z)
+
+            if phonenumbers.is_valid_number(a):
+                LeFournisseur = carrier.name_for_number(a, 'fr')
+                print(f"{Fore.GREEN}[+] {Fore.RESET}" + f"Valid   : {z}")
+                with open("Results/" + f"{LeFournisseur}.txt" , 'a+') as file :
+                    file.write(z + '\n')
+                    file.close()
+            else: 
+                print(f"{Fore.RED}[-] {Fore.RESET}" + f"Invalid : {z}")
 
 check = loads(open('config.json', 'r').read())
 thread = check['Threads']
@@ -93,3 +106,5 @@ if __name__ == '__main__':
     for i in range(int(thread)):
         th = threading.Thread(target=Main)
         th.start()
+        thr = threading.Thread(target=scnd)
+        thr.start()
