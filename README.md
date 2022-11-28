@@ -1,8 +1,6 @@
+---
 
-<p align='center'>
-  <b>Follow me here:</b><br>  
-  <a href="https://github.com/XeroxOnTop">Github</a> 
-</p>
+![Demo Image](https://github.com/XeroxOnTop/Debouncer/blob/main/img/deb.png)
 
 
 ---
@@ -35,7 +33,7 @@ __Availables Features__
   
 ## 📷 Demo 
 ![Demo Image](https://github.com/XeroxOnTop/Debouncer/blob/main/img/debouncergif.gif)  
- 
+
    
   
   
