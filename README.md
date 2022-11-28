@@ -11,7 +11,7 @@
 
 ## ❓ Informations
 
-**Debouncer** This is my debouncer which allow you to generate some french phone number with this format : +336 and check them to filter them according to their operators you can resell the results to persons who want nl (numlist)
+**Debouncer** This is my debouncer which allow you to generate some french phone number with this format : +336 & +337 and check them to filter them according to their operators you can resell the results to persons who want nl (numlist)
  
  
 ## 💻 Features
