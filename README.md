@@ -1,6 +1,6 @@
 ---
 
-![Demo Image](https://github.com/XeroxOnTop/Debouncer/blob/main/img/deb.png)
+![_a_](https://github.com/XeroxOnTop/Debouncer/blob/main/img/discord-banner-gif-5.gif)
 
 
 ---
