@@ -39,7 +39,7 @@ __Availables Features__
   
   
 ##  📝 Contact   
-Discord : `! XeRox ツ#0001`
+Discord : `! XeRox ツ#2010`
 Github: https://github.com/XeroxOnTop
 
 ##  📚 Contributions  
